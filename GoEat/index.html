@@ -1,170 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/LogoMakr.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/css.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/LogoMakr.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/css.css" />
     <script src="archivo_javas.js"></script>
-    <title style="font-family: Helvetica;">GoEat</title>
-
-</head>
-<body style="background-color:white;"  style="font-family: Helvetica;"> 
-  <!--Barra horizontal superior-->
+    <title style="font-family: Helvetica">GoEat</title>
+  </head>
+  <body style="background-color: white" style="font-family: Helvetica">
+    <!--Barra horizontal superior-->
     <div class="topnav">
-        <a class="active" href="index.html"><img src="img/LogoMakr-7SN7XE.png" alt="" width="25px"></a>
-        <a href="Reviews.html" style="margin-top: 7px;">Reviews</a>
-        <a href="Contactanos.html" style="margin-top: 7px;">Contactanos</a>
-        <div class="search-container">
-          <form role="search" id="form">
-            <input type="search" placeholder="¿Que quieres comer hoy?" name="q" id="query">
-            <button type="submit">Buscar<i class="fa fa-search"></i></button>
-          </form>
-        </div>
+      <a class="active" href="index.html"
+        ><img src="img/LogoMakr-7SN7XE.png" alt="" width="25px"
+      /></a>
+      <a href="Reviews.html" style="margin-top: 7px">Reviews</a>
+      <a href="Contactanos.html" style="margin-top: 7px">Contactanos</a>
+      <div class="search-container">
+        <form role="search" id="form">
+          <input
+            type="search"
+            placeholder="¿Que quieres comer hoy?"
+            name="q"
+            id="query"
+          />
+          <button type="submit">Buscar<i class="fa fa-search"></i></button>
+        </form>
       </div>
-      <!--buscador-->
-      <script>
-        const f = document.getElementById('form');
-        const q = document.getElementById('query');
-        const google = 'https://www.google.com/search?q=';
+    </div>
+    <!--buscador-->
+    <script>
+      const f = document.getElementById("form");
+      const q = document.getElementById("query");
+      const google = "https://www.google.com/search?q=";
 
+      function submitted(event) {
+        event.preventDefault();
+        const url = google + "+" + q.value;
+        const win = window.open(url, "_blank");
+        win.focus();
+      }
 
-        function submitted(event) {
-          event.preventDefault();
-          const url = google + '+' + q.value;
-          const win = window.open(url, '_blank');
-          win.focus();
-        }
-  
-        f.addEventListener('submit', submitted);
-      </script>
+      f.addEventListener("submit", submitted);
+    </script>
     <!--Texto principal-->
     <div>
-        <h1 style="text-align: center;">Bienvenidos a <color style="color: red;">GoEat</color></h1>
-        <br>
-        <h3 style="text-align: center;" id="demo" ><i>¿Tienes hambre? Nosotros tenemos restaurantes</i></h3>
+      <h1 style="text-align: center">
+        Bienvenidos a <color style="color: red">GoEat</color>
+      </h1>
+      <br />
+      <h3 style="text-align: center" id="demo">
+        <i>¿Tienes hambre? Nosotros tenemos restaurantes</i>
+      </h3>
     </div>
-  
-    <br>
-    <div style="text-align: center;">
-    <img src="img/Primera_imagen.jpg" alt=""  width="800" height="500" >
+
+    <br />
+    <div style="text-align: center">
+      <img src="img/Primera_imagen.jpg" alt="" width="800" height="500" />
     </div>
-    <br>
-      <h2 style="text-align: center;">Restaurantes con mejor calificación</h2>
-      <h3 style="text-align: center;">Barranquilla</h3>
-      <!--Comienzo de la galeria de imagenes-->
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="https://bit.ly/3wRkPC9">
-            <img src="img/1538573028.jpg" alt="Cinque Terre" width="600" height="400">
-          </a>
-          <div class="desc">Miura Steakhouse <br> Cra. 52 ##76-188 Local 7 <br> 4,6 ★ <br> $$$$</div>
+    <br />
+    <h2 style="text-align: center">Restaurantes con mejor calificación</h2>
+    <h3 style="text-align: center">Barranquilla</h3>
+    <!--Comienzo de la galeria de imagenes-->
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="https://bit.ly/3wRkPC9">
+          <img
+            src="img/1538573028.jpg"
+            alt="Cinque Terre"
+            width="600"
+            height="400"
+          />
+        </a>
+        <div class="desc">
+          Miura Steakhouse <br />
+          Cra. 52 ##76-188 Local 7 <br />
+          4,6 ★ <br />
+          $$$$
         </div>
       </div>
+    </div>
 
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="https://bit.ly/35KGVKu">
-            <img src="img/Varadero.jpg" alt="Cinque Terre" width="600" height="400">
-          </a>
-          <div class="desc">Varadero <br> Carrera 51B No. 79-97  <br> 4,5 ★ <br> $$-$$$</div>
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="https://bit.ly/35KGVKu">
+          <img
+            src="img/Varadero.jpg"
+            alt="Cinque Terre"
+            width="600"
+            height="400"
+          />
+        </a>
+        <div class="desc">
+          Varadero <br />
+          Carrera 51B No. 79-97 <br />
+          4,5 ★ <br />
+          $$-$$$
         </div>
       </div>
+    </div>
 
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="https://bit.ly/3wY24Nu">
-            <img src="img/Nena Lela Trattoria Buenavista.jpg" alt="Cinque Terre" width="600" height="400" >
-          </a>
-          <div class="desc">Nena Lela Trattoria Buenavista <br> Calle 99 No. 52-53 Centro Comercial Buenavista 2 piso 4 L414  <br> 4,5 ★ <br> $$$$</div>
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="https://bit.ly/3wY24Nu">
+          <img
+            src="img/Nena Lela Trattoria Buenavista.jpg"
+            alt="Cinque Terre"
+            width="600"
+            height="400"
+          />
+        </a>
+        <div class="desc">
+          Nena Lela Trattoria Buenavista <br />
+          Calle 99 No. 52-53 Centro Comercial Buenavista 2 piso 4 L414 <br />
+          4,5 ★ <br />
+          $$$$
         </div>
       </div>
+    </div>
 
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="https://noasushi.com/">
-            <img src="img/Noa sushi.jpg" alt="Cinque Terre" width="600" height="400" >
-          </a>
-          <div class="desc">Noa Sushi & Robata <br> Carrera 52 # 76 -208, Barranquilla 080020 Colombia<br> 4,7 ★ <br> $$$$</div>
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="https://noasushi.com/">
+          <img
+            src="img/Noa sushi.jpg"
+            alt="Cinque Terre"
+            width="600"
+            height="400"
+          />
+        </a>
+        <div class="desc">
+          Noa Sushi & Robata <br />
+          Carrera 52 # 76 -208, Barranquilla 080020 Colombia<br />
+          4,7 ★ <br />
+          $$$$
         </div>
       </div>
+    </div>
 
-      <h3 style="text-align: center;">Bogotá</h3>
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="https://bit.ly/3gQHp8r">
-            <img src="img/Capitalino_restaurant.jpg" alt="Cinque Terre" width="600" height="400" >
-          </a>
-          <div class="desc">Capitalino Restaurant  <br> Calle 24a 57 60 Piso 1 Grand Hyatt Bogota, Bogotá 111321 Colombia<br>  5 ★<br>$$$$</div>
+    <h3 style="text-align: center">Bogotá</h3>
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="https://bit.ly/3gQHp8r">
+          <img
+            src="img/Capitalino_restaurant.jpg"
+            alt="Cinque Terre"
+            width="600"
+            height="400"
+          />
+        </a>
+        <div class="desc">
+          Capitalino Restaurant <br />
+          Calle 24a 57 60 Piso 1 Grand Hyatt Bogota, Bogotá 111321 Colombia<br />
+          5 ★<br />$$$$
         </div>
       </div>
+    </div>
 
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="https://osk.meitre.com/">
-            <img src="img/Osaka_cocina_nikkei.jpg" alt="Cinque Terre" width="600" height="400" >
-          </a>
-          <div class="desc">Osaka Cocina Nikkei <br> Carrera 13 85 25, Bogotá 110221 Colombia<br> 4,5 ★ <br>$$$$</div>
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="https://osk.meitre.com/">
+          <img
+            src="img/Osaka_cocina_nikkei.jpg"
+            alt="Cinque Terre"
+            width="600"
+            height="400"
+          />
+        </a>
+        <div class="desc">
+          Osaka Cocina Nikkei <br />
+          Carrera 13 85 25, Bogotá 110221 Colombia<br />
+          4,5 ★ <br />$$$$
         </div>
       </div>
+    </div>
 
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="https://nueve.in/">
-            <img src="img/nueve.jpg" alt="Cinque Terre" width="600" height="400"  >
-          </a>
-          <div class="desc">Nueve <br> Calle 70A #10a-18, Bogotá Colombia<br> 4,5 ★ <br>$$$$</div>
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="https://nueve.in/">
+          <img
+            src="img/nueve.jpg"
+            alt="Cinque Terre"
+            width="600"
+            height="400"
+          />
+        </a>
+        <div class="desc">
+          Nueve <br />
+          Calle 70A #10a-18, Bogotá Colombia<br />
+          4,5 ★ <br />$$$$
         </div>
       </div>
+    </div>
 
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="https://blackbear.com.co">
-            <img src="img/Black_Bear.jpg" alt="Cinque Terre" width="600" height="400" >
-          </a>
-          <div class="desc">Black Bear <br> Carrera 11a # 89-10, Bogotá 110321 Colombia<br> 4,5 ★ <br>$$$$</div>
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="https://blackbear.com.co">
+          <img
+            src="img/Black_Bear.jpg"
+            alt="Cinque Terre"
+            width="600"
+            height="400"
+          />
+        </a>
+        <div class="desc">
+          Black Bear <br />
+          Carrera 11a # 89-10, Bogotá 110321 Colombia<br />
+          4,5 ★ <br />$$$$
         </div>
       </div>
-      <h3 style="text-align: center;">Cali</h3>
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="https://www.restaurantebarcal.com/">
-            <img src="img/Barcarl.png" alt="Cinque Terre" width="600" height="400" >
-          </a>
-          <div class="desc">Restaurante Barcal <br> Calle 7D 43A-70 Barrio El Poblado, Sector Astorga, Diagonal a la Torre Almagran, Medellín 050020 Colombia<br> 4,5 ★ <br>$$$$</div>
-        </div>
-      </div> 
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="https://laprovinciarestaurante.com/">
-            <img src="img/La_provincia.jpg" alt="Cinque Terre" width="600" height="400" >
-          </a>
-          <div class="desc">La Provincia <br> Carrera 42 No. 3 Sur 81 Centro Empresarial Milla de Oro, Medellín 050022 Colombia<br> 4,5 ★ <br>$$$$</div>
-        </div>
-      </div> 
+    </div>
+    <h3 style="text-align: center">Cali</h3>
 
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="http://www.carmenmedellin.com/en/">
-            <img src="img/Carmen.jpg" alt="Cinque Terre" width="600" height="400" >
-          </a>
-          <div class="desc">Carmen <br> Carrera 36 # 10A-27 El Poblado, Medellín 050003 Colombia<br> 4,5 ★ <br>$$$$</div>
-        </div>
-      </div> 
-
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="https://www.thecharlee.com/en/spaces/envy-roof-top/" >
-            <img src="img/Envy-Medellin-Rooftop.jpg" alt="Cinque Terre" width="600" height="400">
-          </a>
-          <div class="desc"> Envy Rooftop <br> Carrera 9a 37 -16 Parque Lleras, Medellín 050014 Colombia<br> 4,5 ★ <br>$$$$</div>
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="https://www.restaurantebarcal.com/">
+          <img
+            src="img/Barcarl.png"
+            alt="Cinque Terre"
+            width="600"
+            height="400"
+          />
+        </a>
+        <div class="desc">
+          Restaurante Barcal <br />
+          Calle 7D 43A-70 Barrio El Poblado, Sector Astorga, Diagonal a la Torre
+          Almagran, Medellín 050020 Colombia<br />
+          4,5 ★ <br />$$$$
         </div>
       </div>
-      <!--Fin de la galeria de imagenes-->
-      
+    </div>
 
-</body>
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="https://laprovinciarestaurante.com/">
+          <img
+            src="img/La_provincia.jpg"
+            alt="Cinque Terre"
+            width="600"
+            height="400"
+          />
+        </a>
+        <div class="desc">
+          La Provincia <br />
+          Carrera 42 No. 3 Sur 81 Centro Empresarial Milla de Oro, Medellín
+          050022 Colombia<br />
+          4,5 ★ <br />$$$$
+        </div>
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="http://www.carmenmedellin.com/en/">
+          <img
+            src="img/Carmen.jpg"
+            alt="Cinque Terre"
+            width="600"
+            height="400"
+          />
+        </a>
+        <div class="desc">
+          Carmen <br />
+          Carrera 36 # 10A-27 El Poblado, Medellín 050003 Colombia<br />
+          4,5 ★ <br />$$$$
+        </div>
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a
+          target="_blank"
+          href="https://www.thecharlee.com/en/spaces/envy-roof-top/"
+        >
+          <img
+            src="img/Envy-Medellin-Rooftop.jpg"
+            alt="Cinque Terre"
+            width="600"
+            height="400"
+          />
+        </a>
+        <div class="desc">
+          Envy Rooftop <br />
+          Carrera 9a 37 -16 Parque Lleras, Medellín 050014 Colombia<br />
+          4,5 ★ <br />$$$$
+        </div>
+      </div>
+    </div>
+    <!--Fin de la galeria de imagenes-->
+
+    <!-- ホセ・ディアス :) -->
+  </body>
 </html>
